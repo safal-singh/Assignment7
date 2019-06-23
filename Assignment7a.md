@@ -1,4 +1,16 @@
-# Assignment7a
+# Assignment7a 
+**Maximum Receptive field calculation for GoogleNet**
+
+r_out = r_in +  (k - 1) * j_in <br/>
+j_out = j_in * s <br/>
+
+where, <br/>
+r_in - receptive field of the previous layer <br/>
+r_out - receptive field of the current layer <br/>
+j_in - jump of the previous layer <br/>
+j_out - jump of the current layer <br/>
+s - stride of current layer <br/>
+k - kernel size of the current layer <br/>
 
 
 | r_in |	j_in |	k	| s |	layer |
@@ -21,3 +33,5 @@
 | 587	| 32	| 5	| 1	| concat8 |
 | 715	| 32	| 5	| 1	| concat9 |
 | 907	| 32	| 7	| 1	| avg pool |
+
+**For grouped convolutions, the network with maximum receptive field is considered.**
